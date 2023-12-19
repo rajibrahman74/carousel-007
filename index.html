@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Component: Slider with indicators inside -->
+    <div class="relative w-full h-screen glide-02">
+        <!-- Slides -->
+        <div class="overflow-hidden" data-glide-el="track">
+            <ul
+                class="glide__slides relative w-full h-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+                <li class="relative h-screen">
+                    <img src="https://qmelocal.com/uploads/benifit/Qme_Local_Banner_final_02.jpeg"
+                        class="w-full h-full object-cover" />
+                    <div class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+                        <div class="px-8 flex gap-6 items-center">
+                            <div class="flex flex-col gap-6 w-1/2">
+                                <h3 class="text-lg font-semibold text-[#6D7BA6]">SCALABLE DIGITAL ECOSYSTEM</h3>
+                                <h2 class="text-4xl font-bold">Drive Your Organization Transformational Digital
+                                    Solutions, Growth and Sustainability</h2>
+                                <p class="text-lg">The power to manage your connectivity, networking, resources and
+                                    information easily and efficiently across any device while giving you access to
+                                    critical data and feedback you need to drive your mission's impact </p>
+                            </div>
+                            <div class="w-1/2 flex justify-center items-center">
+                                <div class="max-w-[450px] w-full flex flex-col gap-4 py-6 pl-4 pr-6 rounded w-1/2 shadow-xl"
+                                    style="background-color: rgba(255, 255, 255, 0.8);">
+                                    <h3 class="text-xl font-semibold">Who Can Benefit From A QmeLocal Digital Ecosystems
+                                    </h3>
+                                    <p>Local Small Business & Communities I Chambers of Commerce I Nonprofits I Economic
+                                        Development Departments l Universities l Local Farming Communities l Trade Org.
+                                        I Real Estate Hubs I Workforce Development l Government Agencies I News
+                                        Publishers I ESG Impact I Health Equity & Wellness I Sports Org. and more</p>
+                                    <div>
+                                        <button
+                                            class="border-none rounded-full py-2 px-3 bg-blue-500 font-semibold text-white text-sm">Start
+                                            A Discovery Conversation With Us</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="relative h-screen">
+                    <img src="https://qmelocal.com/uploads/benifit/Qme_Local_Banner_final_03.jpeg"
+                        class="w-full h-full object-cover" />
+                    <div class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+                        <div class="px-8 flex gap-6 items-center">
+                            <div class="flex flex-col gap-6 w-1/2">
+                                <h3 class="text-lg font-semibold text-[#6D7BA6]">SCALABLE DIGITAL ECOSYSTEM</h3>
+                                <h2 class="text-4xl font-bold">Drive Your Organization Transformational Digital
+                                    Solutions, Growth and Sustainability</h2>
+                                <p class="text-lg">The power to manage your connectivity, networking, resources and
+                                    information easily and efficiently across any device while giving you access to
+                                    critical data and feedback you need to drive your mission's impact </p>
+                            </div>
+                            <div class="w-1/2 flex justify-center items-center">
+                                <div class="max-w-[450px] w-full flex flex-col gap-4 py-6 pl-4 pr-6 rounded w-1/2 shadow-xl"
+                                style="background-color: rgba(255, 255, 255, 0.8);">
+                                <h3 class="text-xl font-semibold">Who Can Benefit From A QmeLocal Digital Ecosystems
+                                </h3>
+                                <p>Local Small Business & Communities I Chambers of Commerce I Nonprofits I Economic
+                                    Development Departments l Universities l Local Farming Communities l Trade Org.
+                                    I Real Estate Hubs I Workforce Development l Government Agencies I News
+                                    Publishers I ESG Impact I Health Equity & Wellness I Sports Org. and more</p>
+                                <div>
+                                    <button
+                                        class="border-none rounded-full py-2 px-3 bg-blue-500 font-semibold text-white text-sm">Start
+                                        A Discovery Conversation With Us</button>
+                                </div>
+                            </div>                               
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Indicators -->
+        <div class="absolute bottom-0 flex items-center justify-center w-full gap-2" data-glide-el="controls[nav]">
+            <button class="p-4 group" data-glide-dir="=0" aria-label="goto slide 1"><span
+                    class="block w-2 h-2 transition-colors duration-300 rounded-full ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+            <button class="p-4 group" data-glide-dir="=1" aria-label="goto slide 2"><span
+                    class="block w-2 h-2 transition-colors duration-300 rounded-full ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+    <script>
+        var glide02 = new Glide('.glide-02', {
+            type: 'slider',
+            focusAt: 'center',
+            perView: 1,
+            autoplay: 3500,
+            animationDuration: 700,
+            gap: 0,
+            classes: {
+                activeNav: '[&>*]:bg-slate-700',
+            },
+        });
+
+        glide02.mount();
+    </script>
+    <!-- End Slider with indicators inside -->
+</body>
+
+</html>
